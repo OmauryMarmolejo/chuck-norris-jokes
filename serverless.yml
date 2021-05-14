@@ -1,0 +1,22 @@
+service: chuck-norris-serverless
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+  stage: dev
+  environment:
+    MAIL_HOST: ${env:MAIL_HOST}
+    MAIL_PORT: ${env:MAIL_PORT}
+    MAIL_USER: ${env:MAIL_USER}
+    MAIL_PASS: ${env:MAIL_PASS}
+
+plugins:
+  - serverless-dotenv-plugin
+
+functions:
+  sendEmail:
+    handler: emailHandler.sendEmail
+  hello:
+    handler: handler.hello

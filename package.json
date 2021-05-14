@@ -1,0 +1,19 @@
+{
+  "name": "chuck-norris-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "emailHandler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.6.0"
+  },
+  "devDependencies": {
+    "node-fetch": "^2.6.1",
+    "serverless-dotenv-plugin": "^3.9.0"
+  }
+}
